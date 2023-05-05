@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prueba.AppController">
+   <children>
+      <AnchorPane fx:id="PanelImagen" layoutX="6.0" layoutY="467.0" prefHeight="110.0" prefWidth="563.0" AnchorPane.bottomAnchor="471.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="563.0" layoutX="-1.0" layoutY="10.0" pickOnBounds="true" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@Encabecado.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelInfo" layoutX="6.0" layoutY="103.0" prefHeight="55.0" prefWidth="548.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="103.0">
+         <children>
+            <Separator prefHeight="5.0" prefWidth="548.0" />
+            <Label text="Datos cliente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Label layoutX="11.0" layoutY="19.0" text="Nombre:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Label layoutX="254.0" layoutY="19.0" text="Cédula:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="txtnombre" layoutX="62.0" layoutY="15.0" prefHeight="25.0" prefWidth="180.0" promptText="Ingrese su nombre" />
+            <TextField fx:id="txtcedula" layoutX="297.0" layoutY="15.0" prefHeight="25.0" prefWidth="180.0" promptText="Ingrese su cédula" />
+            <Label fx:id="lbltipocliente" layoutX="490.0" layoutY="19.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="165.0" prefHeight="110.0" prefWidth="537.0">
+         <children>
+            <Separator layoutX="7.0" layoutY="-1.0" prefHeight="5.0" prefWidth="548.0" />
+            <Label layoutX="14.0" layoutY="2.0" text="Información bancaria" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Separator layoutX="108.0" layoutY="31.0" prefHeight="5.0" prefWidth="444.0" />
+            <Label layoutX="15.0" layoutY="24.0" text="Cuenta ahorros" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Label layoutX="18.0" layoutY="47.0" text="Saldo ahorros:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Button fx:id="btnconsignarAhorros" layoutX="249.0" layoutY="43.0" mnemonicParsing="false" onAction="#btnconsignarAhorros_click" prefHeight="25.0" prefWidth="112.0" text="Consignar" />
+            <Button fx:id="btnretirarAhorros" layoutX="369.0" layoutY="43.0" mnemonicParsing="false" onAction="#btnretirarAhorros_click" prefHeight="25.0" prefWidth="112.0" text="Retirar" />
+            <TextField fx:id="txtsaldoAhorros" layoutX="97.0" layoutY="43.0" prefHeight="25.0" prefWidth="142.0" promptText="\$ 0,00 [0.6%]" />
+            <Label fx:id="lblpuntos" layoutX="497.0" layoutY="11.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="272.0" prefHeight="69.0" prefWidth="504.0" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="272.0">
+         <children>
+            <Label layoutX="6.0" layoutY="6.0" text="Cuenta corriente" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Separator layoutX="108.0" layoutY="12.0" prefHeight="5.0" prefWidth="444.0" />
+            <Label layoutX="9.0" layoutY="30.0" text="Saldo corriente:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="txtsaldoCorriente" layoutX="94.0" layoutY="26.0" prefHeight="25.0" prefWidth="142.0" promptText="\$ 0,00" />
+            <Button fx:id="btnconsignarCorriente" layoutX="249.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnconsignarCorriente_click" prefHeight="25.0" prefWidth="112.0" text="Consignar" />
+            <Button fx:id="btnretirarCorriente" layoutX="371.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnretirarCorriente_click" prefHeight="25.0" prefWidth="112.0" text="Retirar" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="334.0" prefHeight="77.0" prefWidth="548.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="334.0">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="CDT" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Label layoutX="15.0" layoutY="30.0" text="Saldo CDT:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="txtsaldoCDT" layoutX="94.0" layoutY="26.0" prefHeight="25.0" prefWidth="142.0" promptText="\$ 0,00 [0.0%]" />
+            <Button fx:id="btnabrirCDT" layoutX="252.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnabrirCDT_click" prefHeight="25.0" prefWidth="112.0" text="Abrir" />
+            <Button fx:id="btncerrarCDT" layoutX="374.0" layoutY="26.0" mnemonicParsing="false" onAction="#btncerrarCDT_click" prefHeight="25.0" prefWidth="112.0" text="Cerrar" />
+            <Separator layoutX="50.0" layoutY="12.0" prefHeight="3.0" prefWidth="497.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="91.0" prefWidth="563.0" style="-fx-border-color: #868a87;" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="414.0">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="Mes:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="txtmes" layoutX="56.0" layoutY="21.0" promptText="0" />
+            <Button fx:id="btnavanzarMes" layoutX="290.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnavanzarMes_click" prefHeight="25.0" prefWidth="233.0" text="Avanzar mes" />
+            <Label layoutX="261.0" layoutY="57.0" text="Total:" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <TextField fx:id="txttotal" layoutX="306.0" layoutY="53.0" prefHeight="25.0" prefWidth="217.0" promptText="\$ 0,00 " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="504.0" prefHeight="5.0" prefWidth="555.0" style="-fx-border-color: #868a87;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="504.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Opciones" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+            <Separator layoutX="77.0" layoutY="20.0" prefHeight="5.0" prefWidth="456.0" />
+            <Separator layoutX="6.0" layoutY="61.0" prefHeight="5.0" prefWidth="527.0" />
+            <HBox layoutX="159.0" layoutY="28.0" prefHeight="33.0" prefWidth="379.0">
+               <children>
+                  <Button fx:id="btnopcion1" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Opción 1" />
+                  <Separator prefHeight="1.0" prefWidth="47.0" visible="false" />
+                  <Button fx:id="btnopcion2" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Opción 2" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
